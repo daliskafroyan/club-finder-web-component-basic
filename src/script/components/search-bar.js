@@ -3,13 +3,13 @@ class SearchBar extends HTMLElement {
     this.render();
   }
 
-  set clickEvent() {
-      this._clickEvent = event;
-      this.render()
+  set clickEvent(event) {
+    this._clickEvent = event;
+    this.render();
   }
 
   get value() {
-      return this.querySelector("#searchElement").value;
+    return this.querySelector('#searchElement').value;
   }
 
   render() {
@@ -20,7 +20,10 @@ class SearchBar extends HTMLElement {
     </div>
     `;
 
-    this.querySelector("#searchButtonElement").addEventListener(this._clickEvent);
+    this.querySelector('#searchButtonElement').addEventListener(
+      'click',
+      this._clickEvent
+    );
   }
 }
 
