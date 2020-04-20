@@ -2,6 +2,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
+  // entry: { app: ['babel-pollyfill', './src/app.js'] },
+  // query: {
+  //   presets: ['env', 'stage-0'],
+  // },
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
